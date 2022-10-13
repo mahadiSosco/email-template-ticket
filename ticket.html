@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS -->
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 8px 12px;
+    }
+
+    body {
+      background-color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: rgb(102 102 102);
+    }
+
+    h3 {
+      font-size: small;
+      font-weight: 400;
+    }
+
+    .container {
+      background-color: #fff;
+      max-width: 700px;
+      margin: auto;
+      padding-bottom: 20px;
+
+    }
+
+    .border {
+      height: 5px;
+      margin: 0;
+      background-color: #2e4ca0;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 25px 0 25px;
+    }
+
+    .logo-img {
+      width: 40px;
+    }
+
+    .client-name {
+      margin: 25px 25px 25px 25px;
+      font-size: medium;
+    }
+
+    .mail-body {
+      display: flex;
+      font-size: x-small;
+      min-height: calc(100%+50px);
+    }
+
+    .mail-text {
+      text-align: justify;
+      width: 60%;
+      margin-right: 0;
+    }
+
+    .ticket-summary {
+      border: 1px solid lightgray;
+      width: 40%;
+      position: relative;
+      top: 20px;
+      text-align: left;
+    }
+
+    .airline-name {
+      margin: 20px 13px 0 0;
+      font-size: x-small;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+    }
+
+    .ticket {
+      border: 1px solid lightgray;
+      margin: 0 25px 25px 25px;
+      /* font-size: x-small; */
+      /* display: flex; */
+    }
+
+    .ticket-headline {
+      background-color: #286754;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: smaller;
+      margin: 0;
+      padding: 0;
+    }
+
+    .trip-status {
+      font-size: x-small;
+    }
+
+    .flight-info {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .flight {
+      position: relative;
+      font-size: x-small;
+      margin: 0 10px 0 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flight-direction {
+      position: absolute;
+      left: 50px;
+      top: 8px
+    }
+
+    .departure,
+    .arrival {
+      margin: 0;
+    }
+
+    .status {
+      font-size: x-small;
+      margin: 0 0 0 20px;
+
+    }
+
+    @media only screen and (max-width: 500px) {
+      .client-name {
+        text-align: center;
+      }
+
+      .header {
+        flex-direction: column-reverse;
+      }
+
+      th {
+        column-width: 120px;
+      }
+
+    }
+
+    @media only screen and (max-width: 650px) {
+      .mail-body {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mail-text {
+        width: 100%;
+        padding-right: 16px;
+      }
+
+      .ticket-summary {
+        width: 75%;
+        top: 0;
+      }
+
+      th {
+        column-width: 200px;
+      }
+
+      .flight-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        justify-items: center;
+      }
+
+      .flight {
+        gap: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="border"></div>
+    <div class="header">
+      <h3>TRAVEL ITINERARY & RECEIPT</h3>
+      <img class="logo-img" src="./img/logo.png" alt="Logo">
+    </div>
+    <div class="client-name">
+      <p>Ms RUCHI SHARMA</p>
+    </div>
+    <div class="mail-body">
+      <div class="mail-text">
+        <p>Dear Ms Ruchi Sharma</p>
+        <br>
+        <p>We're thrilled to be welcoming you on board Singapore Airlines soon.
+          In the meantime, you'll find your itinerary and conditions for your
+          fare type attached to this e-mail. If you have any questions,
+          don't hesitate to contact your<span style="color: blue;">local Singapore Airlines</span> office. See you soon!
+        </p>
+      </div>
+      <div class="ticket-summary">
+        <table>
+          <tr>
+            <th>BOOKING REFERENCE:</th>
+            <th style="font-size:small; font-weight: 400; text-align: left;">62MSA8</th>
+          </tr>
+          <tr>
+            <td>Ticket number:</td>
+            <td>6182438540526</td>
+          </tr>
+          <tr>
+            <td>Date of Issue:</td>
+            <td>08 Sep 2022</td>
+          </tr>
+          <tr>
+            <td>Place of issue:</td>
+            <td>Online booking</td>
+          </tr>
+          <tr>
+            <td>IATA numbe</td>
+            <td>14098910</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="airline-name">
+      <img style="width: 20px; margin-right:0;" src="./img/logo.png" alt="Short Logo">
+      <img style="width: 20px; margin-right:0;" src="./img/logo.png" alt="Short Logo">
+      <div>Singapore Airlines Group</div>
+    </div>
+    <div class="ticket">
+      <div class="ticket-headline">
+        <div>1. SQ401 • Delhi to Singapore</div>
+        <div>ECONOMY (M)</div>
+      </div>
+      <div class="trip-status">Non-stop • 5hrs 25mins</div>
+      <div class="flight-info">
+        <div class="flight">
+          <div class="departure">
+            <p>DEPARTING</p>
+            <p style="font-size: medium; color:black">DEL 09:00</p>
+            <p>Delhi</p>
+            <p>Monday 12 Sep 2022</p>
+            <p>Indira Gandhi Intl Terminal 3</p>
+          </div>
+          <div class="flight-direction">
+            <img style="width:60%;" src="./img/flight-dir.png" alt="">
+          </div>
+          <div class="arrival">
+            <p>ARRIVING</p>
+            <p style="font-size: medium; color:black">SIN 16:55</p>
+            <p>Singapore</p>
+            <p>Monday 12 Sep 2022</p>
+            <p>Changi</p>
+          </div>
+        </div>
+        <div class="status">
+          <p>STATUS:<span style="color: red;">CONFIRMED</span></p>
+          <div style="display: flex; align-items: center;">
+            <img style="width:20px; margin: 0;" src="./img/logo.png" alt="Logo">
+            <p style="margin: 5px;">Singapore Airlines • SQ401</p>
+          </div>
+          <p>Boeing 787-10</p>
+          <p>Economy</p>
+
+          <div style="display: flex; align-items: center;">
+            <img style="width:20px; margin: 0;" src="./img/baggage.png" alt="Baggage">
+            <p style="margin: 5px;">Checked baggage: 30kg</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-headline">
+        <div>1. SQ401 • Delhi to Singapore</div>
+        <div>ECONOMY (M)</div>
+      </div>
+      <div class="trip-status">Non-stop • 5hrs 25mins</div>
+      <div class="flight-info">
+        <div class="flight">
+          <div class="departure">
+            <p>DEPARTING</p>
+            <p style="font-size: medium; color:black">DEL 09:00</p>
+            <p>Delhi</p>
+            <p>Monday 12 Sep 2022</p>
+            <p>Indira Gandhi Intl Terminal 3</p>
+          </div>
+          <div class="flight-direction">
+            <img style="width:60%;" src="./img/flight-dir.png" alt="">
+          </div>
+          <div class="arrival">
+            <p>ARRIVING</p>
+            <p style="font-size: medium; color:black">SIN 16:55</p>
+            <p>Singapore</p>
+            <p>Monday 12 Sep 2022</p>
+            <p>Changi</p>
+          </div>
+        </div>
+        <div class="status">
+          <p>STATUS:<span style="color: #f90;">CONFIRMED</span></p>
+          <div style="display: flex; align-items: center;">
+            <img style="width:20px; margin: 0;" src="./img/logo.png" alt="Logo">
+            <p style="margin: 5px;">Singapore Airlines • SQ401</p>
+          </div>
+          <p>Boeing 787-10</p>
+          <p>Economy</p>
+
+          <div style="display: flex; align-items: center;">
+            <img style="width:20px; margin: 0;" src="./img/baggage.png" alt="Baggage">
+            <p style="margin: 5px;">Checked baggage: 30kg</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
